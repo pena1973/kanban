@@ -1,0 +1,81 @@
+/* {Select} */
+
+.layout-content-board-column-select-groupe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 272px;
+    height: fit-content;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.layout-content-board-column-arrow {
+    background: rgba(255, 255, 255, 1);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.layout-content-board-column-select {
+    width: 245px;
+    display: inline;
+    align-items: baseline;
+    height: fit-content;
+    min-height: fit-content;
+    background: rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    outline: none;
+    resize: none;
+    border-width: 0;
+}
+
+.layout-content-board-column-select::placeholder {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.349);
+}
+
+.layout-content-board-column-list {
+    position: relative;
+    max-width: 272px;    
+    border-radius: 15px;
+    top: -15px;
+}
+
+.layout-content-board-column-option0 {
+    max-width: 100%;
+    padding: 5px;
+    padding-left: 5px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+.layout-content-board-column-option1 {
+    max-width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+cursor: pointer;
+}
+
+.layout-content-board-column-option:hover {
+    max-width: 100%;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

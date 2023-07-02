@@ -1,0 +1,40 @@
+/* * <!-- {HeaderComponent} --> */ 
+@media screen and (min-width: 401px) {
+    .header {
+        display: flex;
+        background: rgba(0, 103, 163, 1);
+        height: 55px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 103, 163, 1);
+        height: 55px;
+        align-items: end;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-h1 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 401px) {
+    .header-h1 {
+        color: rgba(255, 255, 255, 1);
+        font-family: Roboto;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}

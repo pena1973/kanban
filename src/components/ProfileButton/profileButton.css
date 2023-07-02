@@ -1,0 +1,55 @@
+/* * <!-- {ProfileButton} --> */ 
+.profile-button {
+    display: flex;
+    flex-direction: row;
+    width: 64px;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.profile-arrow {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    position: absolute;
+    width: 134px;
+    height: fit-content;
+    top: 61px;
+    right: 15px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 1);
+    margin: 0;
+    list-style: none;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.dropdown-menu-item {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.profile-rectangle {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 55px;
+    right: 53px;
+}
