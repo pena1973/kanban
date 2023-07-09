@@ -1,31 +1,45 @@
 
-import { ContentBoardColumnTask } from './ContentBoardColumnTask/contentBoardColumnTask';
 import { AddCard } from './AddCard/addCard';
 import "./contentBoardColumn.css";
-import React, { useContext, useState } from "react";
+import  { useContext } from "react";
 import { TasksContext } from "../../../../App";
+import { Link } from 'react-router-dom';
 
 export interface ContentBoardColumnProps {
   columnName: string,
   columnId: number,
+  renderColumn: () => void,
+  calcNumber: number; 
 }
 
-export const ContentBoardColumn = ({ columnName, columnId
+export const ContentBoardColumn = ({ 
+  columnName, 
+  columnId,
+  renderColumn,
+  calcNumber,
 }: ContentBoardColumnProps) => {
-  const tasksContext = useContext(TasksContext);
-  let columnTasks = tasksContext.tasks.filter(element => element.columnId === columnId);
-  // const [] = useState();
+ 
+  const tasksContext = useContext(TasksContext);  
+  let columnTasks =tasksContext.tasks.filter(element => element.columnId === columnId);
+  
+  // вычисляю количество задач предыдущей колонки чтобы замютить кнопку + кард  кроме 1 колонки
+  let columnTasksPrevious =tasksContext.tasks.filter(element => element.columnId === columnId-1);
+  let disabled = ((columnTasksPrevious.length ===0) && columnId>1);
 
-  let columnTaskReactNodes = columnTasks.map(element => { return <ContentBoardColumnTask taskName={element.taskName} taskId={element.taskId} /> });
+  let columnTaskReactNodes = columnTasks.map(element => (
+    <Link
+      to={`/tasks/${element.taskId}`}
+      key={element.taskId} className='layout-content-board-column-task'>
+      <div className="layout-content-board-column-task" > {element.taskName} </div>
+    </Link>
+  )
+  );
+
   return (
-    // !-- {ContentComponentBoardColumn} -->
     <div className="layout-content-board-column">
-
       <div className="layout-content-board-column-name" id={'column' + columnId}>{columnName}</div>
-      {columnTaskReactNodes}
-      {/* {<ContentBoardColumnTask taskName={'Shop page – performance issues'} taskId={'task1'} />} 
-      {<ContentBoardColumnTask taskName={'Checkout bugfix'} taskId={'task2'} />}  */}
-      <AddCard columnId={columnId} />
+      {columnTaskReactNodes}      
+      <AddCard columnId={columnId} renderColumn={renderColumn} disabled ={disabled}  />
     </div>
   );
 }

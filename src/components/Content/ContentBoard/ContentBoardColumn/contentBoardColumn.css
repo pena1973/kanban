@@ -4,7 +4,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px 5px;
-        min-width: 250px;
+        min-width: 288px;
         height: fit-content;
         min-height: 50px;
         max-height: calc(100vh - 55px - 55px - 50px);
@@ -20,7 +20,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px 5px;
-        min-width: 250px;
+        min-width: 288px;
         height: fit-content;
         background: rgba(235, 236, 240, 1);
         border-radius: 10px;
@@ -39,4 +39,30 @@
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+}
+.none{
+    color: brown;
+}
+
+/* {ContentComponentBoardColumnTask} */
+.layout-content-board-column-task {
+    display: inline;
+    align-items: baseline;
+    padding: 5px;
+    width: 100%;
+    max-width: 278px;
+    height: fit-content;
+    min-height: fit-content;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 1);
+    margin: 10px 0;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(46, 52, 63);;
 }

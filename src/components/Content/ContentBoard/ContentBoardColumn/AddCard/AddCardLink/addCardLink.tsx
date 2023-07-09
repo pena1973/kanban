@@ -1,21 +1,22 @@
-import { ReactNode } from "react";
-import React, { useContext } from "react";
-import { TasksContext } from "../../../../../../App";
+
 import "./addCardLink.css";
 
 export interface AddCardLinkProps {    
-
+  handleClick: () => void,
+  disabled: boolean,
+  columnId: number,
 }
 
 export const AddCardLink = ({   
+  handleClick,
+  disabled,
+  columnId,
 }: AddCardLinkProps) => {
-
-  const tasksContext = useContext(TasksContext);
-   
-  
+  let className = disabled? "layout-content-board-column-addcard-disabled":"layout-content-board-column-addcard";
   return (
-    <div className="layout-content-board-column-addcard"> 
+   <div className={className} onClick={handleClick}> 
     + Add card
     </div>
+    
   );
 }

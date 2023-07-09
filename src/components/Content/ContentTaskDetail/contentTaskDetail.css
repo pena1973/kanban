@@ -15,17 +15,21 @@
 }
 
 .layout-content-task-detail-title {
-    width: 100%;
+    width: 100%;    
     height: fit-content;
-    min-height: 28px;
+    min-height: 28px;    
     font-family: Roboto;
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-    color: rgba(0, 0, 0, 1);
+    /* color: rgba(0, 0, 0, 0.1); */
     margin-bottom: 20px;
+    outline: none;
+    resize: none;
+    border-width: 0;
+    /* border: 1px solid rgba(0, 0, 0, 1); */
 }
 
 .layout-content-task-detail-crost {
@@ -36,7 +40,7 @@
 
 .layout-content-task-detail-text {
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 90px);
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;

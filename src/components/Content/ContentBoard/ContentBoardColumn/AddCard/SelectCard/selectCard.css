@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 272px;
+    width: 278px;
     height: fit-content;
     background: rgba(255, 255, 255, 1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 5px;
     border-radius: 5px;
-    margin: 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 .layout-content-board-column-arrow {
@@ -51,26 +51,26 @@
 
 .layout-content-board-column-list {
     position: relative;
-    max-width: 272px;    
+    max-width: 278px;    
     border-radius: 15px;
     top: -15px;
 }
 
-.layout-content-board-column-option0 {
+/* .layout-content-board-column-option0 {
     max-width: 100%;
     padding: 5px;
     padding-left: 5px;
     background: rgba(255, 255, 255, 1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-weight: 700;
-}
+} */
 
-.layout-content-board-column-option1 {
+.layout-content-board-column-option {
     max-width: 100%;
-    padding: 15px;
+    padding: 5px;
     background: rgba(255, 255, 255, 1);
     border: 1px solid rgba(0, 0, 0, 0.1);
-cursor: pointer;
+    cursor: pointer;
 }
 
 .layout-content-board-column-option:hover {
@@ -78,4 +78,5 @@ cursor: pointer;
     padding: 5px;
     background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
