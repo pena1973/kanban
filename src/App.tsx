@@ -5,47 +5,68 @@ import { Layout } from './components/Layout/layout';
 import './App.css';
 
 // массив задач
-let tasks: Task[] = [];
-// текущая задача
-let curentTaskId: number = 0;
+let tasks: Task[] = getTasksFromLocalStorage();
+// localStorage.clear();
+// получили из хранилища
+function getTasksFromLocalStorage() {
+  let string: string | null = localStorage.getItem("tasks");
+  if (string == null) {
+    return []
+  } else {
+  let tasks = JSON.parse(string)
+    return tasks;
+  };
+
+}
+// положили в хранилище
+function setTasksToLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+}
+
+// // текущая задача
+// let curentTaskId: number = 0;
+
 // управляет видимостью формы
 let user: User = { name: 'Ната', }
 
 // временно для отладки MOK
-curentTaskId = 1;
+// curentTaskId = 1;
 
-tasks.push({
-  taskName: 'string1',
-  taskId: 1,
-  taskContent: 'string',
-  columnId: 1
-})
-tasks.push({
-  taskName: 'string2',
-  taskId: 2,
-  taskContent: 'string',
-  columnId: 2
-})
-tasks.push({
-  taskName: 'string3',
-  taskId: 3,
-  taskContent: 'string',
-  columnId: 3
-})
-tasks.push({
-  taskName: 'string4',
-  taskId: 4,
-  taskContent: 'string',
-  columnId: 4
-})
+// tasks.push({
+//   taskName: 'string1',
+//   taskId: 1,
+//   taskContent: 'string',
+//   columnId: 1
+// })
+// tasks.push({
+//   taskName: 'string2',
+//   taskId: 2,
+//   taskContent: 'string',
+//   columnId: 2
+// })
+// tasks.push({
+//   taskName: 'string3',
+//   taskId: 3,
+//   taskContent: 'string',
+//   columnId: 3
+// })
+// tasks.push({
+//   taskName: 'string4',
+//   taskId: 4,
+//   taskContent: 'string',
+//   columnId: 4
+// })
 
 
-export const TasksContext = React.createContext({ tasks, curentTaskId, user });
+export const TasksContext = React.createContext({ tasks, user, getTasksFromLocalStorage, setTasksToLocalStorage });
 
 function App() {
+
+
   return (
     <BrowserRouter>
-      <TasksContext.Provider value={{ tasks, curentTaskId, user }}>
+      <TasksContext.Provider value={{ tasks, user, getTasksFromLocalStorage, setTasksToLocalStorage }}>
         <div className="App">
           <Layout />
         </div>

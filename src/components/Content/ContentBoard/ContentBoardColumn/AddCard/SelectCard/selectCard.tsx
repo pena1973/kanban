@@ -24,7 +24,7 @@ export const SelectCard = ({ columnId, onSelect, onCancel, tasks
   // const [selectTasks, setcolumnTasks] = useState(tasks.filter(element => element.columnId === (columnId - 1)));
 
   let selectTaskReactNodes = selectTasks.map(element => (
-    <div className="layout-content-board-column-option" onClick={() => onSelect(element.taskId)}>{element.taskName}</div> )
+    <div className="layout-content-board-column-option" key={element.taskId} onClick={() => onSelect(element.taskId)}>{element.taskName}</div> )
   );
 
   return (

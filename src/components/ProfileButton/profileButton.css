@@ -45,7 +45,11 @@
     margin: 5px;
     cursor: pointer;
 }
-
+.dropdown-menu-item:hover {
+    margin: 5px;
+    cursor: pointer;    
+    color: rgba(0, 121, 191, 1);
+}
 .profile-rectangle {
     position: absolute;
     width: 11px;

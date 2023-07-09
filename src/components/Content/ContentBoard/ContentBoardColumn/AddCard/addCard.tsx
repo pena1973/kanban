@@ -41,6 +41,8 @@ export const AddCard = ({
       taskContent: 'Необходимо сделать следующее: ',
       columnId: columnId,
     })
+    // Записали в хранилище
+    tasksContext.setTasksToLocalStorage();
   }
 
     // перерисуем  колонку
@@ -56,6 +58,10 @@ export const AddCard = ({
     let task = tasksContext.tasks.find(element => element.taskId === taskId);
     if (!task) return
     task.columnId += 1;    
+    
+    // Записали в хранилище
+    tasksContext.setTasksToLocalStorage();
+    // перерисовали
     renderColumn();
     setStateAddCard('AddCardLink');    
   }

@@ -15,7 +15,7 @@ body * {
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 121, 191, 1);
-        height: 100vh;
+        /* height: 100vh; */
     }
 }
 
@@ -24,7 +24,7 @@ body * {
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 121, 191, 1);
-        height: 100vh;
+        /* height: 100vh; */
 
     }
 }

@@ -10,8 +10,7 @@ export interface ContentProps {
 
 export const Content = ({
 }: ContentProps) => {
-  // const tasksContext = useContext(TasksContext);
-  // const { pathname } = useLocation();  
+ 
   return (
     <div className="layout-content">
       <Routes>        
