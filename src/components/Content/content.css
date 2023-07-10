@@ -13,9 +13,7 @@
     .layout-content {
         width: 100vw;
         height: inherit  ;
-        /* min-height: calc(100% - 55px - 55px);  */
-        /* min-height: -webkit-fill-available; */
-        /* max-height: fit-content;  */
+         min-height: calc(100vh - 55px); 
         background-color: rgba(0, 121, 191, 1);
         padding: 20px;
     }

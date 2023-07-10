@@ -1,5 +1,5 @@
 // import { ReactNode } from "react";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { TasksContext } from "../../App";
 import './footer.css'
 export interface FooterProps {    

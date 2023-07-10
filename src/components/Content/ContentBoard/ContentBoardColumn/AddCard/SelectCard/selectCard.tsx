@@ -1,3 +1,5 @@
+// React.SyntheticEvent<HTMLSelectElement> - мне для использования потом
+
 import { useState } from "react";
 import arrowdown from './images/arrow-down.svg';
 import arrowup from './images/arrow-up.svg';

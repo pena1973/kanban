@@ -16,23 +16,19 @@ function getTasksFromLocalStorage() {
   let tasks = JSON.parse(string)
     return tasks;
   };
-
 }
 // положили в хранилище
 function setTasksToLocalStorage() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
-
 }
 
 // // текущая задача
-// let curentTaskId: number = 0;
+ let curentTaskId: number = 0;
 
 // управляет видимостью формы
 let user: User = { name: 'Ната', }
 
 // временно для отладки MOK
-// curentTaskId = 1;
-
 // tasks.push({
 //   taskName: 'string1',
 //   taskId: 1,
@@ -59,14 +55,12 @@ let user: User = { name: 'Ната', }
 // })
 
 
-export const TasksContext = React.createContext({ tasks, user, getTasksFromLocalStorage, setTasksToLocalStorage });
+export const TasksContext = React.createContext({ tasks, user,curentTaskId, getTasksFromLocalStorage, setTasksToLocalStorage });
 
 function App() {
-
-
   return (
     <BrowserRouter>
-      <TasksContext.Provider value={{ tasks, user, getTasksFromLocalStorage, setTasksToLocalStorage }}>
+      <TasksContext.Provider value={{ tasks, user,curentTaskId, getTasksFromLocalStorage, setTasksToLocalStorage }}>
         <div className="App">
           <Layout />
         </div>

@@ -1,13 +1,28 @@
 /* <!-- {ContentComponentTaskDetail} --> */
+/* {ContentComponent} */
+@media screen and (min-width: 1200px) {
 .layout-content-task-detail {
     /* display: none; */
     width: 100%;
     height: 100%;
+    min-height: calc(100vh - 95px - 55px);
     background: rgba(255, 255, 255, 1);
     border-radius: 5px;
     padding: 15px;
 }
-
+}
+@media screen and (max-width: 1199px) {
+    .layout-content-task-detail {
+        /* display: none; */
+        width: 100%;
+        height: 100%;
+        min-height: calc(100vh - 40px - 55px);
+        background: rgba(255, 255, 255, 1);
+        border-radius: 5px;
+        padding: 15px;
+    }
+    }
+    
 .layout-content-task-detail-title-groupe {
     display: flex;
     flex-direction: row;
@@ -16,7 +31,7 @@
 
 .layout-content-task-detail-title {
     width: 100%;    
-    height: fit-content;
+    height: 55px;
     min-height: 28px;    
     font-family: Roboto;
     font-size: 24px;
@@ -37,10 +52,11 @@
     height: 24px;
     cursor: pointer;
 }
-
+@media screen and (min-width: 1200px) {
 .layout-content-task-detail-text {
     width: 100%;
     height: calc(100% - 90px);
+    min-height: calc(100vh - 205px - 55px);
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
@@ -52,5 +68,24 @@
     resize: none;
     /* border-width: 0; */
     border: 1px solid rgba(0, 0, 0, 0.1);
-
 }
+}
+
+@media screen and (max-width: 1199px){
+    .layout-content-task-detail-text {
+        width: 100%;
+        height: calc(100% - 90px);
+        min-height: calc(100vh - 150px - 55px);
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+        outline: none;
+        resize: none;
+        /* border-width: 0; */
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    }

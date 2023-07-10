@@ -24,9 +24,9 @@ export const ContentTaskDetail = ({
 
   // прописываем изменения редактирования в массив
   useEffect(() => {
-    if (curentTask == undefined) return;
-    curentTask.taskContent = taskContent == undefined ? curentTask.taskContent : taskContent;
-    curentTask.taskName = taskName == undefined ? curentTask.taskName : taskName;
+    if (curentTask === undefined) return;
+    curentTask.taskContent = taskContent === undefined ? curentTask.taskContent : taskContent;
+    curentTask.taskName = taskName === undefined ? curentTask.taskName : taskName;
   }, [taskContent, taskName]);
 
   // при нажатии на крест надо записать измененое в контекст

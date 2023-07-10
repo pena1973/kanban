@@ -1,8 +1,7 @@
 import { ContentBoardColumn } from './ContentBoardColumn/contentBoardColumn';
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { TasksContext } from "../../../App";
 import "./contentBoard.css";
-import { Task } from "../../../types";
 
 export interface ContentBoardProps {
 
